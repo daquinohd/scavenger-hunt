@@ -1,3 +1,7 @@
 body {
 	color: navy;
 }
+
+.err-highlight {
+	background-color: red;
+}
