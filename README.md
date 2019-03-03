@@ -1,1 +1,1 @@
-A super fun scavenger hunt.
+Form for a super fun scavenger hunt.

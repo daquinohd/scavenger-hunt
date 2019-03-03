@@ -1,6 +1,8 @@
 <html>
-	<head>
 
+	<head>
+		<link rel="stylesheet" href="css/sh-global.css" />
+		<script src="js/sh-form.js"></script>	
 	</head>
 
 	<body>
@@ -40,20 +42,6 @@
 				<input id="answers-clear" type="reset" name="Reset" value="Clear" >
 			</div>
 		</form>
-		
-		<script>
-			var ansSubmit = document.getElementById("answers-submit");
-			var ansForm = document.getElementById("answers-form");
-
-			ansForm.addEventListener("submit", function(evt) {
-				evt.preventDefault();
-				fillArray();
-			});
-
-			function fillArray() {
-				alert('**** me');
-			}
-		</script>	
 	</body>
 
 </html>
