@@ -1,17 +1,9 @@
 // Dumb vars
 // TODO: read from file
-var ANS = ['5','3','4','8','2','8','1','7','9'];
-var ansSubmit = document.getElementById("answers-submit");
+var ANS = '135713571';
 var ansForm = document.getElementById("answers-form");
-var ans1 = document.getElementById("ans1");
-var ans2 = document.getElementById("ans2");
-var ans3 = document.getElementById("ans3");
-var ans4 = document.getElementById("ans4");
-var ans5 = document.getElementById("ans5");
-var ans6 = document.getElementById("ans6");
-var ans7 = document.getElementById("ans7");
-var ans8 = document.getElementById("ans8");
-var ans9 = document.getElementById("ans9");
+var ansSubmit = document.getElementById("answers-submit");
+var guesses = document.querySelectorAll('.ans-input');
 var err = 'err-highlight';
 
 // Callback
@@ -22,12 +14,17 @@ ansForm.addEventListener("submit", function(evt) {
 
 // Highlight bad fields
 function checkEm(form) {
+	var ansArr = ANS.split('');
 
 	clearHighlights(err);
+	for (var i = 0; i < ansArr.length; i++) {
+		console.log(guesses[i].value);
+		console.log(ansArr[i]);
 
-	// Add loop.
-	if(form.ans1.value != ANS[0]) {
-		addHighlight(ans1, err);
+		if(guesses[i].value !== ansArr[i]) {
+			var ulli = document.getElementById('ans' + (i + 1));
+			addHighlight(ulli, err);
+		}
 	}
 
 }
